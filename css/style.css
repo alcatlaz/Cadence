@@ -6,14 +6,13 @@
 -----------------------------------------------------------------*/
 
 body {
-   margin: 0;
-   padding: 0;
+   	margin: 0;
+   	padding: 0;
+	color: var(--black);
 }
 
 h2 {
 	text-transform: uppercase;
-  	border-bottom: 3px solid silver;
-	width: 90%;
 	margin-left: 1em;
 }
 
@@ -158,6 +157,11 @@ ul.menu a:hover {
 	color: #1ABC9C;
 }
 
+.title-U-line{
+	  	border-bottom: 3px solid silver;
+	width: 90%;
+}
+
 /* ----------------------------------------------------------------
 	Footer
 -----------------------------------------------------------------*/
@@ -272,4 +276,138 @@ ul.menu a:hover {
 .footer-logo {
 	display: block;
 	margin-bottom: 30px;
+}
+
+/* ----------------------------------------------------------------
+	portfolio
+-----------------------------------------------------------------*/
+
+.prettifydiv {
+  	font-size: 13px;
+}
+
+.p-img {
+  	display: block;
+  	max-width: 100%;
+  	height: auto;
+}
+
+ol {
+  	list-style: none;
+}
+
+a {
+  	text-decoration: none;
+  	color: inherit;
+}
+
+.container {
+/*  max-width: 1400px;*/
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+input[type="radio"] {
+  	position: absolute;
+  	left: -9999px;
+}
+.filters {
+  	text-align: center;
+  	margin-bottom: 2rem;
+}
+.filters * {
+  	display: inline-block;
+}
+.filters label {
+  	text-align: center;
+  	padding: 0.25rem 0.5rem;
+  	margin-bottom: 0.25rem;
+  	min-width: 50px;
+  	line-height: normal;
+  	cursor: pointer;
+  	transition: all 0.2s;
+  	color: #999;
+/*	border: 1px ridge #ffdddd;*/
+}
+.filters label:hover {
+  	background: #1ABC9C;
+  	color: #fff;
+}
+.targets {
+  	display: grid;
+  	grid-gap: 1.5rem;
+  	grid-template-columns: repeat(4, 1fr);
+}
+.targets .target {
+/*  background: #fafafa;*/
+/*  border: 1px solid rgba(0, 0, 0, 0.1);*/
+}
+.targets .target-title {
+  	font-size: 1.2rem;
+  	margin: 1rem 0 1rem 0.25rem;
+  	color: black;
+}
+.targets .target-title:hover {
+	color: #999;
+/*  	text-decoration: underline;*/
+}
+.targets figcaption {
+  	padding: 0.5rem;
+  	font-size: 0.75rem;
+}
+.targets .target-categories {
+  	margin-bottom: 0.75rem;
+  	font-size: 0.75rem;
+}
+.targets .target-categories * {
+  	display: inline-block;
+}
+.targets .target-categories li {
+  	margin-bottom: 0.2rem;
+}
+.targets .target-categories a {
+  	padding: 0.2rem 0.5rem;
+  	transition: all 0.1s;
+  	color: #1ABC9C;
+}
+.targets .target-categories a:hover {
+  	background: #1ABC9C;
+  	color: #fff;
+}
+/* フィルタリング  */
+[value="All"]:checked ~ .filters [for="All"],
+[value="sound"]:checked ~ .filters [for="sound"],
+[value="event"]:checked ~ .filters [for="event"], 
+[value="movie"]:checked ~ .filters [for="movie"], 
+[value="cd"]:checked ~ .filters [for="cd"], 
+[value="study"]:checked ~ .filters [for="study"], 
+[value="other"]:checked ~ .filters [for="other"] {
+	background: #1ABC9C;
+  	color: #fff;
+}
+[value="All"]:checked ~ .targets [data-category] {
+  	display: block;
+}
+[value="sound"]:checked ~ .targets .target:not([data-category~="sound"]), 
+[value="event"]:checked ~ .targets .target:not([data-category~="event"]), 
+[value="movie"]:checked ~ .targets .target:not([data-category~="movie"]),
+[value="cd"]:checked ~ .targets .target:not([data-category~="cd"]), 
+[value="study"]:checked ~ .targets .target:not([data-category~="study"]), 
+[value="other"]:checked ~ .targets .target:not([data-category~="other"]) {
+  	display: none;
+}
+/* メディアクエリ */
+@media screen and (max-width: 900px) {
+	.targets {
+    	grid-template-columns: repeat(3, 1fr);
+  	}
+}
+
+@media screen and (max-width: 650px) {
+  	html {
+    	font-size: 14px;
+  	}
+  	.targets {
+    	grid-template-columns: repeat(2, 1fr);
+  	}
 }
