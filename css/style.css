@@ -20,6 +20,10 @@ p {
 	text-indent: 1.0em;
 }
 
+li{
+	list-style: none;
+}
+
 .clear {
 	clear: both;
 	display: block;
@@ -158,7 +162,13 @@ ul.menu a:hover {
 }
 
 .title-U-line{
-	  	border-bottom: 3px solid silver;
+	border-bottom: 3px solid silver;
+	width: 90%;
+}
+
+.title-U-line-blank{
+	padding-top: 100px;
+	border-bottom: 3px solid silver;
 	width: 90%;
 }
 
@@ -283,96 +293,91 @@ ul.menu a:hover {
 -----------------------------------------------------------------*/
 
 .prettifydiv {
-  	font-size: 13px;
+  font-size: 13px;
 }
-
-.p-img {
-  	display: block;
-  	max-width: 100%;
-  	height: auto;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-
 ol {
-  	list-style: none;
+  list-style: none;
 }
-
 a {
-  	text-decoration: none;
-  	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
-/*  max-width: 1400px;*/
-	max-width: 100%;
-	margin: 0 auto;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 input[type="radio"] {
-  	position: absolute;
-  	left: -9999px;
+  position: absolute;
+  left: -9999px;
 }
 .filters {
-  	text-align: center;
-  	margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 .filters * {
-  	display: inline-block;
+  display: inline-block;
 }
 .filters label {
-  	text-align: center;
-  	padding: 0.25rem 0.5rem;
-  	margin-bottom: 0.25rem;
-  	min-width: 50px;
-  	line-height: normal;
-  	cursor: pointer;
-  	transition: all 0.2s;
-  	color: #999;
-/*	border: 1px ridge #ffdddd;*/
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.25rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #999;
 }
 .filters label:hover {
-  	background: #1ABC9C;
-  	color: #fff;
+  background: #1ABC9C;
+  color: #fff;
 }
 .targets {
-  	display: grid;
-  	grid-gap: 1.5rem;
-  	grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 .targets .target {
-/*  background: #fafafa;*/
-/*  border: 1px solid rgba(0, 0, 0, 0.1);*/
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .targets .target-title {
-  	font-size: 1.2rem;
-  	margin: 1rem 0 1rem 0.25rem;
-  	color: black;
+  font-size: 1.2rem;
+  margin: 1rem 0 1rem 0.25rem;
+  color: black;
 }
 .targets .target-title:hover {
+/*  text-decoration: underline;*/
 	color: #999;
-/*  	text-decoration: underline;*/
 }
 .targets figcaption {
-  	padding: 0.5rem;
-  	font-size: 0.75rem;
+  padding: 0.5rem;
+  font-size: 0.75rem;
 }
 .targets .target-categories {
-  	margin-bottom: 0.75rem;
-  	font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
 }
 .targets .target-categories * {
-  	display: inline-block;
+  display: inline-block;
 }
 .targets .target-categories li {
-  	margin-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 .targets .target-categories a {
-  	padding: 0.2rem 0.5rem;
-  	transition: all 0.1s;
-  	color: #1ABC9C;
+  padding: 0.2rem 0.5rem;
+  transition: all 0.1s;
+  color: #1ABC9C;
 }
 .targets .target-categories a:hover {
-  	background: #1ABC9C;
-  	color: #fff;
+  background: #1ABC9C;
+  color: #fff;
 }
 /* フィルタリング  */
 [value="All"]:checked ~ .filters [for="All"],
@@ -382,11 +387,11 @@ input[type="radio"] {
 [value="cd"]:checked ~ .filters [for="cd"], 
 [value="study"]:checked ~ .filters [for="study"], 
 [value="other"]:checked ~ .filters [for="other"] {
-	background: #1ABC9C;
-  	color: #fff;
+  background: #1ABC9C;
+  color: #fff;
 }
 [value="All"]:checked ~ .targets [data-category] {
-  	display: block;
+  display: block;
 }
 [value="sound"]:checked ~ .targets .target:not([data-category~="sound"]), 
 [value="event"]:checked ~ .targets .target:not([data-category~="event"]), 
@@ -394,20 +399,229 @@ input[type="radio"] {
 [value="cd"]:checked ~ .targets .target:not([data-category~="cd"]), 
 [value="study"]:checked ~ .targets .target:not([data-category~="study"]), 
 [value="other"]:checked ~ .targets .target:not([data-category~="other"]) {
-  	display: none;
+  display: none;
 }
 /* メディアクエリ */
 @media screen and (max-width: 900px) {
-	.targets {
-    	grid-template-columns: repeat(3, 1fr);
-  	}
+  .targets {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 650px) {
-  	html {
-    	font-size: 14px;
-  	}
-  	.targets {
-    	grid-template-columns: repeat(2, 1fr);
-  	}
+  html {
+    font-size: 14px;
+  }
+  .targets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------------
+	details
+-----------------------------------------------------------------*/
+
+summary {
+  	/* display: list-item;以外を指定してデフォルトの三角形アイコンを消します */
+  	display: block;
+	width: 80%;
+	padding: 0 5%;
+}
+
+summary::-webkit-details-marker {
+  	/* Safariで表示されるデフォルトの三角形アイコンを消します */
+  	display: none;
+	width: 80%;
+	padding: 0 5%;
+}
+
+.summary_inner{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #1ABC9C;
+  font-weight: bold;
+  color: #002255;
+}
+
+/* --------アイコンを作ります-------- */
+.icon {
+  display: block;
+  position: relative;
+  width: 24px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transform-origin: center 43%;
+  transition: transform 0.4s;
+}
+
+/* アコーディオンが開いた時のスタイル */
+details[open] .icon {
+  transform: rotate(180deg);
+}
+
+/* アイコンのバーのスタイル */
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 3px;
+  background-color: #1ABC9C;
+}
+
+.icon::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.icon::after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+.anser{
+	padding: 0 5%;
+}
+
+/* ----------------------------------------------------------------
+	event
+-----------------------------------------------------------------*/
+
+.deadline{
+	color: #7E7E7E;
+}
+.event {
+	margin-bottom: 3px;
+	margin-top: 5px;
+}
+
+.kadomarubox{
+	display: inline-block;
+	padding: 5px;
+    margin: 5px 1px;
+  	background: #1ABC9C;
+	color: white;
+  	border-radius:20px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.area {
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.tab_class {
+  width: calc(95%/4);
+  height: 50px;
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+  border: solid 1px #dddddd;
+}
+
+input[name="tab_name"] {
+  display: none;
+}
+ 
+input:checked + .tab_class {
+  background-color: cadetblue;
+  color: aliceblue;
+}
+ 
+.content_class {
+  display: none;
+  width: 100%;
+}
+ 
+input:checked + .tab_class + .content_class {
+  display: block;
+}
+
+.col_full {
+    clear: both;
+    float: none;
+    margin-right: 0;
+	display: block;
+    position: relative;
+    margin-right: 4%;
+    margin-bottom: 50px;
+    float: left;
+	width: 100%;
+}
+
+.panel-default > .panel-heading {
+    color: #333333;
+    background-color: #f5f5f5;
+    border-color: #dddddd;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+	border: solid 1px #dddddd;
+    border-radius: 3px 3px 0 0;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.panel-body {
+    padding: 5 15px;
+	border: solid 1px #dddddd;
+    border-radius: 0 0 3px 3px;
+}
+
+.panel-body:before{
+	content: " ";
+    display: table;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.panel-body:after{
+	clear: both;
+	content: " ";
+    display: table;
+}
+
+/* ----------------------------------------------------------------
+	timer
+-----------------------------------------------------------------*/
+
+.countdown-container {
+  margin: 3rem;
+}
+
+.time-container {
+  display: flex;
+}
+
+.time {
+  margin: .1rem;
+}
+
+#day, #hour,#min,#sec {
+  font-size: 3rem;
+  margin-right: 0.5rem;
 }
