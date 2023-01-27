@@ -51,7 +51,7 @@
     <input type="radio" id="sound" name="categories" value="sound">
     <input type="radio" id="event" name="categories" value="event">
     <input type="radio" id="movie" name="categories" value="movie">
-    <input type="radio" id="cd" name="categories" value="cd">
+    <input type="radio" id="game" name="categories" value="game">
     <input type="radio" id="study" name="categories" value="study">
     <input type="radio" id="other" name="categories" value="other">
     <ol class="filters">
@@ -59,12 +59,32 @@
       <li><label for="sound">サウンド</label></li>
       <li><label for="event">イベント</label></li>
       <li><label for="movie">映像</label></li>
-      <li><label for="cd">CD</label></li>
+      <li><label for="game">ゲーム</label></li>
       <li><label for="study">講習会</label></li>
       <li><label for="other">その他</label></li>
     </ol>
     <ol class="targets">
-      <li class="target" data-category="sound movie">
+      <li class="target" data-category="sound event">
+        <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
+          <h2 class="target-title"> <a href="../event/SDFirst.html">サウンド+デザインジャム</a> </h2>
+          <ol class="target-categories">
+            <li> <a href="#">サウンド</a> </li>
+            <li> <a href="#">イベント</a> </li>
+          </ol>
+          <figcaption>説明〜〜</figcaption>
+        </figure>
+      </li>
+      <li class="target" data-category="sound event">
+        <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
+          <h2 class="target-title"> <a href="../event/Nawafes.html">なわフェス2022</a> </h2>
+          <ol class="target-categories">
+            <li> <a href="#">サウンド</a> </li>
+            <li> <a href="#">イベント</a> </li>
+          </ol>
+          <figcaption>なわフェス2022</figcaption>
+        </figure>
+      </li>
+	<li class="target" data-category="sound movie">
         <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
           <h2 class="target-title"> <a href="../portfolio/vocakore.html">サイコロタイムジェリー</a> </h2>
           <ol class="target-categories">
@@ -72,26 +92,6 @@
             <li> <a href="#">映像</a> </li>
           </ol>
           <figcaption>ボカコレ2022</figcaption>
-        </figure>
-      </li>
-      <li class="target" data-category="sound event">
-        <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
-          <h2 class="target-title"> <a href="#">Title 2</a> </h2>
-          <ol class="target-categories">
-            <li> <a href="#">サウンド</a> </li>
-            <li> <a href="#">イベント</a> </li>
-          </ol>
-          <figcaption>キャプション2</figcaption>
-        </figure>
-      </li>
-      <li class="target" data-category="cd other">
-        <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
-          <h2 class="target-title"> <a href="#">Title 3</a> </h2>
-          <ol class="target-categories">
-            <li> <a href="#">CD</a> </li>
-            <li> <a href="#">その他</a> </li>
-          </ol>
-          <figcaption>キャプション3</figcaption>
         </figure>
       </li>
       <li class="target" data-category="movie study">
@@ -104,21 +104,21 @@
           <figcaption>キャプション4</figcaption>
         </figure>
       </li>
-      <li class="target" data-category="event cd">
+      <li class="target" data-category="event game">
         <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
           <h2 class="target-title"> <a href="#">Title 5</a> </h2>
           <ol class="target-categories">
             <li> <a href="#">イベント</a> </li>
-            <li> <a href="#">CD</a> </li>
+            <li> <a href="#">ゲーム</a> </li>
           </ol>
           <figcaption>キャプション5</figcaption>
         </figure>
       </li>
-      <li class="target" data-category="cd">
+      <li class="target" data-category="game">
         <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
           <h2 class="target-title"> <a href="#">Title 6</a> </h2>
           <ol class="target-categories">
-            <li> <a href="#">CD</a> </li>
+            <li> <a href="#">ゲーム</a> </li>
           </ol>
           <figcaption>キャプション6</figcaption>
         </figure>
@@ -153,11 +153,11 @@
           <figcaption>キャプション9</figcaption>
         </figure>
       </li>
-      <li class="target" data-category="cd other">
+      <li class="target" data-category="game other">
         <figure> <a href="#"> <img src="../img/yellow.png" alt=""> </a>
           <h2 class="target-title"> <a href="#">Title 10</a> </h2>
           <ol class="target-categories">
-            <li> <a href="#">CD</a> </li>
+            <li> <a href="#">ゲーム</a> </li>
             <li> <a href="#">その他</a> </li>
           </ol>
           <figcaption>キャプション10</figcaption>
